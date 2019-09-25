@@ -1,1 +1,4 @@
+
+#volumes vs InstanceId
+
 aws ec2 describe-volumes --query 'Volumes[*]. {ID:VolumeId,InstanceId:Attachments[0].InstanceId,AZ:AvailabilityZone,Size:Size}' --output table --region us-east-1
